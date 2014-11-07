@@ -104,6 +104,7 @@
                                     <rect key="frame" x="106" y="86" width="109" height="30"/>
                                 </variation>
                                 <connections>
+                                    <action selector="addEquipment:" destination="RzS-Bj-xxy" eventType="touchUpInside" id="4K2-rx-jml"/>
                                     <segue destination="Lpr-rn-0Qc" kind="show" id="pZl-CX-uF0"/>
                                 </connections>
                             </button>
@@ -115,6 +116,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="137" y="396" width="46" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="finishOrder:" destination="RzS-Bj-xxy" eventType="touchUpInside" id="uRs-b2-pMh"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="15H-Fn-n4M">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -145,6 +149,15 @@
                                     <segue destination="vXZ-lx-hvc" kind="show" id="Dpf-g2-8yG"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9v-7o-Rn9">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="106" y="157" width="42" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -154,6 +167,7 @@
                                 <exclude reference="15H-Fn-n4M"/>
                                 <exclude reference="Z4I-d0-qi6"/>
                                 <exclude reference="alD-4G-K91"/>
+                                <exclude reference="d9v-7o-Rn9"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -163,9 +177,13 @@
                                 <include reference="15H-Fn-n4M"/>
                                 <include reference="Z4I-d0-qi6"/>
                                 <include reference="alD-4G-K91"/>
+                                <include reference="d9v-7o-Rn9"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="itemLabel" destination="d9v-7o-Rn9" id="IWV-hd-M8i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wOV-ZN-RJ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -204,11 +222,11 @@
                                     <rect key="frame" x="16" y="601" width="96" height="30"/>
                                 </variation>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Cgw-Nu-ad7">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="UhT-OC-h1h">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="58" width="382" height="535"/>
+                                    <rect key="frame" x="16" y="58" width="288" height="490"/>
                                 </variation>
                             </tableView>
                         </subviews>
@@ -217,22 +235,25 @@
                             <mask key="subviews">
                                 <exclude reference="7jG-P9-oFN"/>
                                 <exclude reference="1bV-dE-nM1"/>
-                                <exclude reference="Cgw-Nu-ad7"/>
+                                <exclude reference="UhT-OC-h1h"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="7jG-P9-oFN"/>
                                 <include reference="1bV-dE-nM1"/>
-                                <include reference="Cgw-Nu-ad7"/>
+                                <include reference="UhT-OC-h1h"/>
                             </mask>
                         </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="equipmentTable" destination="UhT-OC-h1h" id="VrA-Oh-jTF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MOS-A8-Vrf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1323.75" y="1158.5"/>
+            <point key="canvasLocation" x="1323" y="1210"/>
         </scene>
         <!--Check Reservation-->
         <scene sceneID="vFI-N9-W0q">
@@ -273,6 +294,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="16" y="518" width="46" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="checkAvailability:" destination="vpD-xu-IjY" eventType="touchUpInside" id="dep-H9-FW8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -291,6 +315,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="equipmentView" destination="Lg0-TB-VPz" id="hdw-bK-9Th"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R5W-Fh-goR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -302,6 +329,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="bix-7c-E7W"/>
-        <segue reference="Dpf-g2-8yG"/>
+        <segue reference="2Ca-wg-tGb"/>
     </inferredMetricsTieBreakers>
 </document>

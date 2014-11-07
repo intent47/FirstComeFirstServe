@@ -10,6 +10,18 @@ import UIKit
 
 class newReservation: UIViewController
 {
+    
+    
+    //Label to view equipment selected
+    @IBOutlet var itemLabel: UILabel!
+    
+    
+    @IBAction func finishOrder(sender: AnyObject)
+    {
+        //DUH
+        
+    }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()

@@ -10,6 +10,10 @@ import UIKit
 
 class equipment: UIViewController
 {
+    
+    //Table to show equipment available
+    @IBOutlet var equipmentTable: UITableView!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()

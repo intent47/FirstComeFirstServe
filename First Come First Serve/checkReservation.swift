@@ -10,6 +10,17 @@ import UIKit
 
 class checkReservation: UIViewController
 {
+    //Table view to populate with equipment
+    @IBOutlet var equipmentView: UITableView!
+    
+    
+    @IBAction func checkAvailability(sender: AnyObject)
+    {
+        //Checks the order selected
+        
+    }
+    
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()

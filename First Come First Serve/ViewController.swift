@@ -12,9 +12,9 @@ class ViewController: UIViewController
 {
     
     //Information for database
-    var items = ["Amplified Speaker", "Camcorder", "Conference Phone", "Document Camera", "Laptop", "Lavallier Microphone", "Projector", "Projector Screen", "Small Speaker", "Tripod", "Webcam", "Wireless Microphone"]
     
-    var orderInfo = []
+    let idNum = 0, desc = 1, itemTitle = 2, availability = 3
+    
     
     @IBAction func checkRes(sender: AnyObject)
     {
@@ -38,6 +38,13 @@ class ViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
 
+    func showAlert( theTitle: String, theMessage: String )
+    {
+        let allertContoller = UIAlertController(title: theTitle, message: theMessage, preferredStyle: .Alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        allertContoller.addAction(defaultAction)
+        presentViewController(allertContoller, animated: true, completion: nil)
+    }
 
 }
 

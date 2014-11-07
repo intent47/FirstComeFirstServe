@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  First Come First Serve
 //
-//  Created by Stefan Hurthibise on 10/21/14.
-//  Copyright (c) 2014 Stefan Hurthibise. All rights reserved.
+//  Created by Josh Bosley and Stefan Hurthibise on 10/21/14.
+//  A Buff Dove University Living Product
 //
 
 import UIKit
