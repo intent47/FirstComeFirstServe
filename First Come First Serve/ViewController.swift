@@ -11,19 +11,19 @@ import UIKit
 class ViewController: UIViewController
 {
     
+    //Information for database
+    var items = ["Amplified Speaker", "Camcorder", "Conference Phone", "Document Camera", "Laptop", "Lavallier Microphone", "Projector", "Projector Screen", "Small Speaker", "Tripod", "Webcam", "Wireless Microphone"]
+    
+    var orderInfo = []
     
     @IBAction func checkRes(sender: AnyObject)
     {
         //Link to check current reservations
-        
-        
     }
     
     @IBAction func newRes(sender: AnyObject)
     {
         //Link to make a new reservation
-        
-        
     }
 
     override func viewDidLoad()

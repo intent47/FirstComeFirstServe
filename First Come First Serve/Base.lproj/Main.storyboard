@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--Main-->
@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlC-jl-rSP">
@@ -86,12 +86,13 @@
         <!--New Reservation-->
         <scene sceneID="44o-mO-WcP">
             <objects>
-                <viewController title="New Reservation" id="RzS-Bj-xxy" sceneMemberID="viewController">
+                <viewController title="New Reservation" id="RzS-Bj-xxy" customClass="newReservation" customModule="First_Come_First_Serve" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="THl-Bv-K1d"/>
                         <viewControllerLayoutGuide type="bottom" id="XIA-HL-TYn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1lt-0S-NsD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WyD-s3-vx2">
@@ -173,21 +174,15 @@
         <!--Equipment-->
         <scene sceneID="Bgv-XZ-FYY">
             <objects>
-                <viewController title="Equipment" id="Lpr-rn-0Qc" sceneMemberID="viewController">
+                <viewController title="Equipment" id="Lpr-rn-0Qc" customClass="equipment" customModule="First_Come_First_Serve" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8Lp-4Y-jsG"/>
                         <viewControllerLayoutGuide type="bottom" id="Wcb-bY-SQx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MOZ-5L-vsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Cgw-Nu-ad7">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="51" width="320" height="517"/>
-                                </variation>
-                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jG-P9-oFN">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Back">
@@ -200,18 +195,36 @@
                                     <segue destination="RzS-Bj-xxy" kind="show" id="bix-7c-E7W"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bV-dE-nM1">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Add to Order">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="601" width="96" height="30"/>
+                                </variation>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Cgw-Nu-ad7">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="58" width="382" height="535"/>
+                                </variation>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Cgw-Nu-ad7"/>
                                 <exclude reference="7jG-P9-oFN"/>
+                                <exclude reference="1bV-dE-nM1"/>
+                                <exclude reference="Cgw-Nu-ad7"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="Cgw-Nu-ad7"/>
                                 <include reference="7jG-P9-oFN"/>
+                                <include reference="1bV-dE-nM1"/>
+                                <include reference="Cgw-Nu-ad7"/>
                             </mask>
                         </variation>
                     </view>
@@ -219,17 +232,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MOS-A8-Vrf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1282.5" y="1159"/>
+            <point key="canvasLocation" x="1323.75" y="1158.5"/>
         </scene>
         <!--Check Reservation-->
         <scene sceneID="vFI-N9-W0q">
             <objects>
-                <viewController title="Check Reservation" id="vpD-xu-IjY" sceneMemberID="viewController">
+                <viewController title="Check Reservation" id="vpD-xu-IjY" customClass="checkReservation" customModule="First_Come_First_Serve" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hrq-lg-Wan"/>
                         <viewControllerLayoutGuide type="bottom" id="1zn-CQ-Zzm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ILE-Q2-fUi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1no-LO-EBN">
@@ -287,7 +301,7 @@
         <image name="logo" width="543" height="82"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2Ca-wg-tGb"/>
-        <segue reference="VVw-IV-TEE"/>
+        <segue reference="bix-7c-E7W"/>
+        <segue reference="Dpf-g2-8yG"/>
     </inferredMetricsTieBreakers>
 </document>
