@@ -16,6 +16,8 @@ class ViewController: UIViewController
     let idNum = 0, desc = 1, itemTitle = 2, availability = 3
     
     
+    
+    
     @IBAction func checkRes(sender: AnyObject)
     {
         //Link to check current reservations
